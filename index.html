@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <form onsubmit="return false;">
+      <table border="1px">
+        <tr>
+          <td><label for="salary">Lương</label><br /></td>
+          <td>
+            <input type="number" id="salary" name="salary" value="0" /><br />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="salary_num">Hệ số lương:</label><br /></td>
+          <td>
+            <input type="number" id="salary_num" name="salary_num" value="0" />
+          </td>
+        </tr>
+        <tr>
+          <td style="text-align: center" colspan="2">
+            <button onclick="myFunction()">Tính lương tháng</button>
+          </td>
+        </tr>
+        <tr>
+          <td><p>Lương tháng</p></td>
+          <td><p id="salary_cal">&nbsp;</p></td>
+        </tr>
+      </table>
+    </form>
+    <script>
+      function myFunction() {
+        var sal = document.getElementById("salary");
+        var num = document.getElementById("salary_num");
+
+        if (sal.value <= 0 || num.value <= 0) {
+          sal.value = 0;
+          num.value = 0;
+          alert("Vui lòng nhập thông tin hợp lệ");
+        }
+
+        if (sal.value === "" || num.value === "") {
+          sal.value = 0;
+          num.value = 0;
+          alert("Vui lòng nhập đủ thông tin");
+        }
+
+        document.getElementById("salary_cal").innerHTML = sal.value * num.value;
+      }
+    </script>
+  </body>
+</html>

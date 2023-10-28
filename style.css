@@ -1,0 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+table {
+  background-color: #fecd92;
+  border: 1px solid blue;
+  font-size: 32px;
+  width: 30%;
+}
+td {
+  padding: 12px;
+}
+
+input {
+  padding: 10px;
+  font-size: 20px;
+}
+#salary::-webkit-inner-spin-button,
+#salary::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+button {
+  width: 50%;
+  padding: 10px;
+  border-top-left-radius: 24px;
+  border-bottom-left-radius: 24px;
+  border-top-right-radius: 24px;
+  border-bottom-right-radius: 24px;
+  font-size: 20px;
+}
